@@ -1,0 +1,46 @@
+/* Estilos personalizados */
+
+/* Encabezado */
+header {
+//   background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+  /* Servicios */
+#servicios .card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+#servicios .card:hover {
+    transform: scale(1.05);
+}
+
+  /* Beneficios */
+#beneficios ul {
+    font-size: 1.2rem;
+}
+
+#beneficios img {
+    border-radius: 8px;
+}
+
+  /* Llamada a la acción */
+section.text-center h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section.text-center p {
+    font-size: 1.2rem;
+}
