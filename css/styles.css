@@ -57,7 +57,7 @@ img:hover, .card:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1); /* Oscurece la imagen para mejor legibilidad */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .hero-section .container {
@@ -69,12 +69,8 @@ img:hover, .card:hover {
 .hero-section .text-left {
     max-width: 600px;
     text-align: left;
-    margin-left: 5%;  /* Ajuste de margen desde la izquierda */
+    margin-left: 5%;
 }
-
-
-
-
 
 
 /* Sección de 'Qué es' */
@@ -92,8 +88,8 @@ img:hover, .card:hover {
   
 /* Encabezado */
 header {
-    //background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    background-color: #f8f9fa;
+    background-image: url("../img/banner.avif");
+    //////background-color: #f8f9fa;
     background-size: cover;
     color: #fff;
     padding: 100px 20px;
