@@ -21,6 +21,7 @@ h1 {
   }
 
 
+
 header p {
     font-size: 1.5rem;
 }
@@ -89,7 +90,6 @@ img:hover, .card:hover {
 /* Encabezado */
 header {
     background-image: url("../img/banner.avif");
-    //////background-color: #f8f9fa;
     background-size: cover;
     color: #fff;
     padding: 100px 20px;
