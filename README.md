@@ -6,7 +6,7 @@
 
 This repository contains the source code for my **home automation services** website, designed with a minimalist and modern approach. The site includes four main pages:
 
-- **Home**: Introduction to the brand and its values.
+- **Home**: Introduction to the brand.
 - **What is**: Detailed explanation of home automation and its benefits.
 - **Services**: Overview of the services offered, including home automation, smart security, climate control, and more.
 - **Contact**: Contact form for inquiries and quotes.
