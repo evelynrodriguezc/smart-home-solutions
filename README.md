@@ -21,4 +21,5 @@ This project was developed using the following technologies:
 - **Bootstrap Icons** for modern and lightweight icons.
 
 
+You can visit the live version of the website here: [Smart Home Solutions](https://evelynrodriguezc.github.io/smart-home-solutions/)
 
