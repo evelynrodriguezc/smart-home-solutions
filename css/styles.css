@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --bs-font-sans-serif: 'Plus Jakarta Sans', sans-serif;
+}
+
 /* Espaciados */
 h1, h2, h3, p {
     margin-bottom: 1.5rem;
@@ -5,7 +11,7 @@ h1, h2, h3, p {
 
 /* Encabezado */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: #343a40;
     background-color: #ffffff;
   }
@@ -39,6 +45,25 @@ img:hover, .card:hover {
   img, .card {
     transition: all 0.3s ease;
   }
+
+/* Service card lift */
+.col-md-4:has(.service-image),
+.col-md-4:has(.featured-service-image) {
+  padding: 1.25rem 1rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-md-4:has(.service-image):hover,
+.col-md-4:has(.featured-service-image):hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px #007bff;
+}
+
+.col-md-4:has(.service-image):hover img,
+.col-md-4:has(.featured-service-image):hover img {
+  box-shadow: none;
+}
 
 
 
@@ -110,7 +135,7 @@ header {
     width: 350px; /* Tamaño más grande para las imágenes destacadas */
     height: 350px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 20px;
   }
   
   /* Botón de llamado a la acción */
@@ -139,7 +164,7 @@ section.bg-white {
   width: 230px;
   height: 230px;
   object-fit: cover; /* Mantiene la calidad de la imagen y la ajusta al tamaño */
-  border-radius: 8px; /* Opcional: bordes redondeados para un toque moderno */
+  border-radius: 16px;
 }
 
 /* Botón de llamado a la acción */
