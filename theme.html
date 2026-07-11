@@ -1,107 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qué es la Domótica? — SmartHome</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="title.theme">¿Qué es la Domótica? — SmartHome</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/i18n.js" defer></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="./index.html">SmartHome</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">¿Qué es?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">SmartHome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+          <li class="nav-item"><a class="nav-link" href="./services.html" data-i18n="nav.services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <header class="page-hero page-hero--image">
+    <img src="./img/theme-hero.jpg" alt="" class="page-hero__bg" aria-hidden="true">
+    <div class="container">
+      <span class="eyebrow" data-i18n="theme.hero.eyebrow">Tecnología del hogar</span>
+      <h1 class="page-hero__title" data-i18n-html="theme.hero.title">
+        ¿Qué es<br>la <em>Domótica?</em>
+      </h1>
+      <p class="page-hero__body" data-i18n="theme.hero.body">
+        La inteligencia aplicada al espacio donde más importa: tu hogar.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── Intro Split ── -->
+  <section class="intro-split">
+    <div class="container">
+      <div class="intro-split__grid">
+        <div class="reveal">
+          <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="theme.intro.eyebrow">La idea</span>
+          <p class="intro-split__lead" data-i18n-html="theme.intro.lead">
+            Tu hogar responde a ti — no tú a él. Eso es la <em>domótica.</em>
+          </p>
+          <p class="intro-split__body" data-i18n="theme.intro.p1">
+            La domótica es la automatización integral del hogar: luces, temperatura, seguridad, persianas y electrodomésticos conectados en un solo ecosistema que puedes controlar desde tu teléfono o con tu voz.
+          </p>
+          <p class="intro-split__body" data-i18n="theme.intro.p2">
+            Imagina que tu cafetera enciende cuando te despiertas, que las persianas suben solas con el sol, o que recibes una alerta en tu móvil si se detecta movimiento en casa mientras estás de viaje. Todo eso es posible hoy, y lo hacemos realidad en tu hogar.
+          </p>
+          <p class="intro-split__body" style="margin-bottom: 0;" data-i18n="theme.intro.p3">
+            No es ciencia ficción: es tecnología discreta, elegante y al servicio de quien vive en el espacio.
+          </p>
         </div>
-    </nav>
-
-    <!-- Hero -->
-    <header class="page-header">
-        <div class="container">
-            <h1>¿Qué es la Domótica?</h1>
-            <p class="lead">Tecnología que conecta y mejora tu hogar.</p>
+        <div class="intro-split__visual reveal reveal-d2">
+          <img src="./img/cover1.jpg" alt="Interior de hogar inteligente" class="intro-split__img">
+          <div class="intro-split__badge">
+            <span class="intro-split__badge-num">10+</span>
+            <span class="intro-split__badge-label" data-i18n="theme.intro.badge.label">Sistemas integrados</span>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Intro: text left, image right -->
-    <section class="intro-section">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <p class="intro-text">
-                        La domótica es la automatización de tu hogar, que te permite controlar diversos dispositivos como luces, calefacción, seguridad y electrodomésticos desde tu teléfono o con comandos de voz. Una casa inteligente está equipada con tecnología interconectada que facilita la vida diaria.
-                    </p>
-                    <p class="intro-text">
-                        Imagina poder programar tu cafetera para que comience a funcionar cuando te despiertas, o recibir alertas en tu móvil si se detecta movimiento en tu hogar mientras estás fuera. Con la domótica, puedes optimizar el uso de energía, aumentar la seguridad y disfrutar de una mayor comodidad.
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="./img/cover1.jpg" alt="Domótica" class="img-fluid intro-image">
-                </div>
-            </div>
+  <!-- ── Benefits ── -->
+  <section class="benefits">
+    <div class="container">
+      <div class="benefits__header reveal">
+        <span class="eyebrow" data-i18n="theme.benefits.eyebrow">Por qué importa</span>
+        <h2 class="section-title section-title--light" style="max-width: 520px;" data-i18n-html="theme.benefits.title">
+          Tres razones para <em>automatizar</em>
+        </h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-item reveal">
+          <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+          </svg>
+          <h3 class="benefit-item__title" data-i18n="theme.benefit.01.title">Comodidad sin esfuerzo</h3>
+          <p class="benefit-item__body" data-i18n="theme.benefit.01.body">
+            Controla todos tus dispositivos desde un solo lugar — tu teléfono, tu voz, o de manera completamente automática según tus rutinas diarias. Tu hogar aprende cómo vives.
+          </p>
         </div>
-    </section>
 
-    <!-- Beneficios -->
-    <section class="benefits-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Beneficios</h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="bi bi-lightbulb"></i>
-                        </div>
-                        <h5>Comodidad</h5>
-                        <p class="text-muted">Controla todos tus dispositivos desde un solo lugar, ya sea tu teléfono o mediante comandos de voz. La automatización te permite programar tareas diarias, haciendo tu vida más fácil y eficiente.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="bi bi-shield-lock"></i>
-                        </div>
-                        <h5>Ahorro de energía</h5>
-                        <p class="text-muted">Optimiza el consumo energético al programar luces y electrodomésticos. Puedes monitorizar el uso de energía en tiempo real, lo que ayuda a reducir costos y contribuir al cuidado del medio ambiente.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <i class="bi bi-phone"></i>
-                        </div>
-                        <h5>Seguridad</h5>
-                        <p class="text-muted">Monitorea tu hogar de manera remota con cámaras y sistemas de alarma conectados. Recibe notificaciones instantáneas sobre movimientos sospechosos y asegúrate de que tu hogar esté protegido.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="benefit-item reveal reveal-d1">
+          <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+          </svg>
+          <h3 class="benefit-item__title" data-i18n="theme.benefit.02.title">Ahorro de energía</h3>
+          <p class="benefit-item__body" data-i18n="theme.benefit.02.body">
+            Monitoriza el consumo en tiempo real y programa dispositivos para funcionar solo cuando se necesitan. La eficiencia no se nota en el día a día — se nota en la factura.
+          </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</p>
-    </footer>
+        <div class="benefit-item reveal reveal-d2">
+          <svg class="benefit-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+          </svg>
+          <h3 class="benefit-item__title" data-i18n="theme.benefit.03.title">Seguridad real</h3>
+          <p class="benefit-item__body" data-i18n="theme.benefit.03.body">
+            Cámaras conectadas, sensores de movimiento y alarmas inteligentes te avisan al instante. Monitoriza tu hogar estés donde estés, en tiempo real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- ── Pull Quote ── -->
+  <section class="pull-quote">
+    <div class="container">
+      <div class="pull-quote__inner reveal">
+        <span class="pull-quote__mark">"</span>
+        <p class="pull-quote__text" data-i18n-html="theme.quote">
+          Un hogar inteligente no es un lujo — es la decisión de vivir con <em>más tiempo, más seguridad y más confort.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ── -->
+  <section class="cta-band">
+    <img src="./img/energetica.jpg" alt="" class="cta-band__bg" aria-hidden="true">
+    <div class="cta-band__content">
+      <div class="container">
+        <h2 class="cta-band__title reveal" data-i18n-html="cta.theme.title">
+          Descubre los <em>servicios</em><br>que ofrecemos
+        </h2>
+        <p class="cta-band__body reveal reveal-d1" data-i18n="cta.theme.body">
+          Desde la automatización más sencilla hasta instalaciones integrales de alta gama para toda la vivienda.
+        </p>
+        <div class="cta-band__actions reveal reveal-d2">
+          <a href="./services.html" class="btn-gold" data-i18n="cta.theme.primary">Ver todos los servicios</a>
+          <a href="./contact.html" class="btn-ghost"><span data-i18n="cta.theme.secondary">Contactar</span> <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <span class="footer-brand">SmartHome</span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tecnología residencial de lujo. Diseñamos hogares que responden a quienes los habitan.</p>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.nav.heading">Navegación</p>
+          <ul class="footer-col__links">
+            <li><a href="./index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+            <li><a href="./services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
+          <ul class="footer-col__links">
+            <li><a href="./services.html">Automatización</a></li>
+            <li><a href="./services.html">Seguridad</a></li>
+            <li><a href="./services.html">Climatización</a></li>
+            <li><a href="./services.html">Iluminación</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.contact.heading">Contacto</p>
+          <ul class="footer-col__links">
+            <li><a href="mailto:contacto@smarthome.com">contacto@smarthome.com</a></li>
+            <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+            <li><a href="./contact.html" data-i18n="footer.contact.visit">Solicitar visita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="footer-legal" data-i18n="footer.legal">&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</span>
+        <span class="footer-accent" data-i18n="footer.accent">Vivir bien, es vivir inteligente.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  </script>
 </body>
 </html>

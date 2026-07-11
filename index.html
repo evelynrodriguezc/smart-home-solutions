@@ -1,102 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="title.home">SmartHome — Domótica Residencial de Lujo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/i18n.js" defer></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">SmartHome</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./theme.html">¿Qué es?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contacto</a>
-                    </li>
-                </ul>
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">SmartHome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html" data-i18n="nav.home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+          <li class="nav-item"><a class="nav-link" href="./services.html" data-i18n="nav.services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero__left">
+      <div class="hero__content">
+        <div class="hero__rule" aria-hidden="true"></div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Domótica Residencial de Lujo</span>
+        <h1 class="hero__headline">
+          <span class="hero__headline-serif" data-i18n="hero.headline1">Tu hogar,</span>
+          <span class="hero__headline-accent" data-i18n="hero.headline2">Inteligente</span>
+        </h1>
+        <p class="hero__body" data-i18n="hero.body">
+          Diseñamos y automatizamos espacios residenciales con tecnología invisible que se adapta a tu vida — no al revés.
+        </p>
+        <div class="hero__actions">
+          <a href="./services.html" class="btn-gold" data-i18n="hero.cta.primary">Ver Servicios</a>
+          <a href="./contact.html" class="btn-ghost"><span data-i18n="hero.cta.secondary">Hablar con un experto</span> <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__right" aria-hidden="true">
+      <img src="./img/hero-lounge.jpg" alt="" class="hero__image" id="heroImg">
+    </div>
+    <div class="hero__scroll-hint">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-label" data-i18n="hero.scroll">Descubrir</span>
+    </div>
+  </section>
+
+  <!-- ── Features Strip ── -->
+  <div class="features-strip">
+    <div class="features-strip__item reveal">
+      <span class="features-strip__num">01</span>
+      <div class="features-strip__text">
+        <span class="features-strip__label" data-i18n="features.01.label">Automatización Total</span>
+        <span class="features-strip__sub" data-i18n="features.01.sub">Luces, persianas, clima y más</span>
+      </div>
+    </div>
+    <div class="features-strip__divider"></div>
+    <div class="features-strip__item reveal reveal-d1">
+      <span class="features-strip__num">02</span>
+      <div class="features-strip__text">
+        <span class="features-strip__label" data-i18n="features.02.label">Seguridad Avanzada</span>
+        <span class="features-strip__sub" data-i18n="features.02.sub">Vigilancia en tiempo real</span>
+      </div>
+    </div>
+    <div class="features-strip__divider"></div>
+    <div class="features-strip__item reveal reveal-d2">
+      <span class="features-strip__num">03</span>
+      <div class="features-strip__text">
+        <span class="features-strip__label" data-i18n="features.03.label">Eficiencia Energética</span>
+        <span class="features-strip__sub" data-i18n="features.03.sub">Consumo optimizado y medible</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Services Showcase ── -->
+  <section class="services-showcase">
+    <div class="container">
+      <div class="services-showcase__header">
+        <div class="reveal">
+          <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="showcase.eyebrow">Lo que hacemos</span>
+          <h2 class="section-title" data-i18n-html="showcase.title">Servicios <em>destacados</em></h2>
+        </div>
+        <a href="./services.html" class="section-link reveal reveal-d1">
+          <span data-i18n="showcase.link">Ver todos los servicios</span> <span>→</span>
+        </a>
+      </div>
+
+      <div class="svc-editorial">
+        <article class="svc-e reveal">
+          <a href="./services.html" class="svc-e__link">
+            <div class="svc-e__media">
+              <img src="./img/ilu3.jpg" alt="Iluminación Inteligente" class="svc-e__img" data-i18n-attr="alt:showcase.iluminacion.title">
             </div>
-        </div>
-    </nav>
-
-    <section class="hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="text-start">
-                <h1 class="display-4 fw-bold">¡Tu Casa Inteligente</h1>
-                <h1 class="display-4 fw-bold">te está esperando!</h1>
-                <p class="lead">Entra y descubre nuestros servicios.</p>
-                <a href="./services.html" class="btn btn-primary btn-lg mt-3">Entrar</a>
+            <div class="svc-e__body">
+              <span class="svc-e__tag" data-i18n="showcase.iluminacion.tag">Automatización</span>
+              <h3 class="svc-e__title" data-i18n="showcase.iluminacion.title">Iluminación Inteligente</h3>
+              <p class="svc-e__desc" data-i18n="showcase.iluminacion.desc">Control total del ambiente luminoso con escenas personalizadas por habitación.</p>
+              <span class="svc-e__arrow">→</span>
             </div>
-        </div>
-    </section>
+          </a>
+        </article>
 
-
-
-    <!-- Sección de Servicios Destacados -->
-    <section class="py-5 bg-white">
-        <div class="container">
-            <h2 class="fw-light mb-5 text-center">Servicios Destacados</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card-box">
-                        <img src="./img/ilu3.jpg" class="service-image" alt="Automatización del Hogar" title="">
-                        <div class="service-card-body">
-                            <h5>Automatización del Hogar</h5>
-                            <p class="text-muted">Controla luces, persianas y electrodomésticos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card-box">
-                        <img src="./img/cam2.jpg" class="service-image" alt="Seguridad Inteligente" title="">
-                        <div class="service-card-body">
-                            <h5>Seguridad Inteligente</h5>
-                            <p class="text-muted">Vigila tu hogar con cámaras conectadas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card-box">
-                        <img src="./img/termo3.jpg" class="service-image" alt="Control Climático" title="">
-                        <div class="service-card-body">
-                            <h5>Control Climático</h5>
-                            <p class="text-muted">Optimiza el consumo energético con sistemas inteligentes.</p>
-                        </div>
-                    </div>
-                </div>
+        <article class="svc-e reveal reveal-d1">
+          <a href="./services.html" class="svc-e__link">
+            <div class="svc-e__media">
+              <img src="./img/cam2.jpg" alt="Seguridad Inteligente" class="svc-e__img" data-i18n-attr="alt:services.02.title">
             </div>
+            <div class="svc-e__body">
+              <span class="svc-e__tag" data-i18n="showcase.seguridad.tag">Seguridad</span>
+              <h3 class="svc-e__title" data-i18n="showcase.seguridad.title">Seguridad Conectada</h3>
+              <p class="svc-e__desc" data-i18n="showcase.seguridad.desc">Cámaras HD, sensores y alertas en tiempo real desde cualquier lugar.</p>
+              <span class="svc-e__arrow">→</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="svc-e reveal reveal-d2">
+          <a href="./services.html" class="svc-e__link">
+            <div class="svc-e__media">
+              <img src="./img/termo3.jpg" alt="Climatización Inteligente" class="svc-e__img" data-i18n-attr="alt:showcase.clima.title">
+            </div>
+            <div class="svc-e__body">
+              <span class="svc-e__tag" data-i18n="showcase.clima.tag">Confort</span>
+              <h3 class="svc-e__title" data-i18n="showcase.clima.title">Climatización Inteligente</h3>
+              <p class="svc-e__desc" data-i18n="showcase.clima.desc">Temperatura perfecta en cada habitación, de forma automática.</p>
+              <span class="svc-e__arrow">→</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats Band ── -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-num">200<span style="font-size:0.6em; color: var(--c-accent-light);">+</span></span>
+          <span class="stat-label" data-i18n="stats.homes">Hogares automatizados</span>
         </div>
-    </section>
-
-    <!-- Botón de llamado a la acción -->
-    <section class="cta-section cta-dark">
-        <div class="container">
-            <h3>¿Listo para transformar tu hogar?</h3>
-            <p>Contáctanos y empieza a disfrutar de la domótica.</p>
-            <a href="./contact.html" class="btn btn-outline-light btn-lg">Contáctanos</a>
+        <div class="stat-item reveal reveal-d1">
+          <span class="stat-num">6</span>
+          <span class="stat-label" data-i18n="stats.years">Años de experiencia</span>
         </div>
-    </section>
+        <div class="stat-item reveal reveal-d2">
+          <span class="stat-num">98<span style="font-size:0.6em; color: var(--c-accent-light);">%</span></span>
+          <span class="stat-label" data-i18n="stats.satisfaction">Clientes satisfechos</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</p>
-    </footer>
+  <!-- ── CTA Band ── -->
+  <section class="cta-band">
+    <img src="./img/cover1.jpg" alt="" class="cta-band__bg" aria-hidden="true">
+    <div class="cta-band__content">
+      <div class="container">
+        <h2 class="cta-band__title reveal" data-i18n-html="cta.home.title">
+          ¿Quieres transformar<br><em>tu hogar?</em>
+        </h2>
+        <p class="cta-band__body reveal reveal-d1" data-i18n="cta.home.body">
+          Un experto de nuestro equipo visitará tu hogar sin compromiso y te propondrá la solución perfecta.
+        </p>
+        <div class="cta-band__actions reveal reveal-d2">
+          <a href="./contact.html" class="btn-gold" data-i18n="cta.home.primary">Solicitar consulta gratuita</a>
+          <a href="./theme.html" class="btn-ghost"><span data-i18n="cta.home.secondary">Conocer más</span> <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <span class="footer-brand">SmartHome</span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tecnología residencial de lujo. Diseñamos hogares que responden a quienes los habitan.</p>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.nav.heading">Navegación</p>
+          <ul class="footer-col__links">
+            <li><a href="./index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+            <li><a href="./services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
+          <ul class="footer-col__links">
+            <li><a href="./services.html">Automatización</a></li>
+            <li><a href="./services.html">Seguridad</a></li>
+            <li><a href="./services.html">Climatización</a></li>
+            <li><a href="./services.html">Iluminación</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.contact.heading">Contacto</p>
+          <ul class="footer-col__links">
+            <li><a href="mailto:contacto@smarthome.com">contacto@smarthome.com</a></li>
+            <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+            <li><a href="./contact.html" data-i18n="footer.contact.visit">Solicitar visita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="footer-legal" data-i18n="footer.legal">&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</span>
+        <span class="footer-accent" data-i18n="footer.accent">Vivir bien, es vivir inteligente.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    // Navbar scroll state
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    // Subtle hero image parallax scale on load
+    const heroImg = document.getElementById('heroImg');
+    if (heroImg) {
+      heroImg.addEventListener('load', () => {
+        heroImg.style.transform = 'scale(1.03)';
+        setTimeout(() => heroImg.style.transform = 'scale(1)', 100);
+      });
+    }
+  </script>
 </body>
 </html>
