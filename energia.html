@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="title.energy">Ahorro Energético — SmartHome</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/motion.css">
+  <link rel="stylesheet" href="./css/service.css">
+  <script>document.documentElement.classList.add('motion')</script>
+  <script src="./js/i18n.js" defer></script>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">SmartHome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+          <li class="nav-item nav-sub">
+            <a class="nav-link active" href="./services.html" data-i18n="nav.services">Servicios</a>
+            <ul class="nav-sub__menu">
+              <li><a class="nav-sub__link" href="./automatizacion.html" data-i18n="services.01.title">Automatización del Hogar</a></li>
+              <li><a class="nav-sub__link" href="./seguridad.html" data-i18n="services.02.title">Seguridad Inteligente</a></li>
+              <li><a class="nav-sub__link is-current" href="./energia.html" data-i18n="services.03.title">Ahorro Energético</a></li>
+              <li><a class="nav-sub__link" href="./iluminacion.html" data-i18n="services.04.title">Iluminación Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./voz.html" data-i18n="services.05.title">Control por Voz</a></li>
+              <li><a class="nav-sub__link" href="./clima.html" data-i18n="services.06.title">Climatización Inteligente</a></li>
+              <li class="nav-sub__all"><a class="nav-sub__link" href="./services.html"><span data-i18n="nav.services.all">Ver todos</span> <span class="arrow">→</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <header class="page-hero page-hero--photo">
+    <img src="./img/energy-hero.jpg" alt="" class="page-hero__photo" style="object-position: 50% 40%" aria-hidden="true">
+    <div class="container">
+      <a href="./services.html" class="svc-back" data-hero style="--i:0"><span class="arrow">←</span> <span data-i18n="svc.back">Todos los servicios</span></a>
+      <span class="eyebrow" data-hero style="--i:1; display:block" data-i18n="energy.hero.eyebrow">Servicio 03 · Ahorro energético</span>
+      <h1 class="page-hero__title" data-hero style="--i:2" data-i18n-html="energy.hero.title">Gastar menos,<br><em>sin pensar en ello</em></h1>
+      <p class="page-hero__body" data-hero style="--i:3" data-i18n="energy.hero.body">La casa mide lo que consume, apaga lo que nadie usa y aprovecha la energía cuando es más barata. Tú solo ves la factura bajar.</p>
+    </div>
+  </header>
+
+  <section class="layers layers--energy" data-layers data-active="0">
+    <div class="container layers__grid">
+      <div class="layers__steps">
+        <div class="layers__intro" data-layer-step="0">
+          <span class="eyebrow" data-i18n="energy.layers.eyebrow">Un mes cualquiera</span>
+          <h2 class="section-title section-title--light reveal-mask" data-i18n-html="energy.layers.title">Lo que no se ve,<br><em>se puede ahorrar</em></h2>
+          <p data-i18n="energy.layers.body">Baja despacio: el mes de una casa, semana a semana.</p>
+        </div>
+
+        <article class="layer-step" data-layer-step="1">
+          <span class="layer-step__num" data-i18n="energy.l1.time">Semana 1 · Medir</span>
+          <h3 class="layer-step__title" data-i18n="energy.l1.title">Ves qué gasta cada cosa</h3>
+          <p class="layer-step__body" data-i18n="energy.l1.body">Un medidor en el tablero eléctrico mide el consumo de cada circuito en tiempo real. Por fin sabes qué aparato se lleva la factura.</p>
+        </article>
+
+        <article class="layer-step" data-layer-step="2">
+          <span class="layer-step__num" data-i18n="energy.l2.time">Semana 2 · Cortar</span>
+          <h3 class="layer-step__title" data-i18n="energy.l2.title">Nada encendido sin razón</h3>
+          <p class="layer-step__body" data-i18n="energy.l2.body">Lo que queda en standby se apaga de noche y cuando sales. Las luces y el aire no trabajan para una casa vacía.</p>
+        </article>
+
+        <article class="layer-step" data-layer-step="3">
+          <span class="layer-step__num" data-i18n="energy.l3.time">Semana 3 · Mover</span>
+          <h3 class="layer-step__title" data-i18n="energy.l3.title">Gastar en el mejor momento</h3>
+          <p class="layer-step__body" data-i18n="energy.l3.body">La lavadora y el calentador funcionan cuando la tarifa es más baja o cuando hay sol en los paneles. El mismo confort, menos factura.</p>
+        </article>
+      </div>
+
+      <div class="layers__stage">
+        <div class="layers__frame energy" style="--ar: 1800 / 1200">
+          <img src="./img/energy-room.jpg" alt="Sala luminosa de día" class="layers__img layers__img--plain energy__room" data-i18n-attr="alt:energy.layers.alt">
+          <div class="ui-card energy-card">
+            <div class="ui-card__top"><span data-i18n="energy.card.label">Consumo · este mes</span><span class="ui-card__tag" data-i18n="energy.card.tag">Ejemplo</span></div>
+            <div class="energy-card__num"><span data-steps="0,412,338,291">0</span><small>kWh</small></div>
+            <div class="energy-card__delta"><span class="energy-card__arrow">↓</span> <span data-steps="0,0,18,29">0</span>% <span data-i18n="energy.card.vs">vs. el mes pasado</span></div>
+            <svg class="energy-card__chart" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="0" y1="22" x2="300" y2="22" class="energy-card__ref"/>
+              <path d="M0,22 L12,20 L24,24 L36,19 L48,23 L60,21 L72,25 L84,20 L96,23 L108,46 L120,44 L132,48 L144,43 L156,47 L168,45 L180,49 L192,44 L204,63 L216,60 L228,64 L240,61 L252,65 L264,62 L276,66 L288,63 L300,64" pathLength="100" class="energy-card__line"/>
+            </svg>
+            <div class="energy-card__weeks"><span>S1</span><span>S2</span><span>S3</span></div>
+          </div>
+          <div class="layers__legend" aria-hidden="true">
+            <span data-legend="1" data-i18n="energy.legend.1">Medir</span>
+            <span data-legend="2" data-i18n="energy.legend.2">Cortar</span>
+            <span data-legend="3" data-i18n="energy.legend.3">Mover</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-includes">
+    <div class="container">
+      <div class="svc-includes__header">
+        <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="lighting.inc.eyebrow">Qué incluye</span>
+        <h2 class="section-title reveal-mask" data-i18n-html="energy.inc.title">Ahorro que se puede medir,<br><em>no promesas</em></h2>
+      </div>
+      <div class="svc-includes__grid">
+        <div class="svc-includes__item reveal">
+          <h3 class="svc-includes__title" data-i18n="energy.inc.1.title">Medidor por circuito</h3>
+          <p class="svc-includes__body" data-i18n="energy.inc.1.body">Se instala en el tablero, sin obras. Ves el consumo de la cocina, el aire o el calentador por separado.</p>
+        </div>
+        <div class="svc-includes__item reveal reveal-d1">
+          <h3 class="svc-includes__title" data-i18n="energy.inc.2.title">Enchufes inteligentes</h3>
+          <p class="svc-includes__body" data-i18n="energy.inc.2.body">Para televisores, consolas y todo lo que se queda en standby. Se apagan solos cuando no hacen falta.</p>
+        </div>
+        <div class="svc-includes__item reveal">
+          <h3 class="svc-includes__title" data-i18n="energy.inc.3.title">Paneles solares y batería</h3>
+          <p class="svc-includes__body" data-i18n="energy.inc.3.body">Si los tienes o los quieres, la casa decide cuándo usar, guardar o comprar energía.</p>
+        </div>
+        <div class="svc-includes__item reveal reveal-d1">
+          <h3 class="svc-includes__title" data-i18n="energy.inc.4.title">Informe cada mes</h3>
+          <p class="svc-includes__body" data-i18n="energy.inc.4.body">Un resumen simple en la app: cuánto gastaste, cuánto ahorraste y en qué.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container svc-faq__grid">
+      <div>
+        <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="lighting.faq.eyebrow">Preguntas frecuentes</span>
+        <h2 class="section-title reveal-mask" data-i18n-html="lighting.faq.title">Antes de<br><em>empezar</em></h2>
+      </div>
+      <div>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="energy.faq.1.q">¿Cuánto se ahorra de verdad?</summary>
+          <p class="svc-faq__a" data-i18n="energy.faq.1.a">Depende de cada casa. En la visita medimos tu consumo y te damos una estimación con tus números antes de instalar nada.</p>
+        </details>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="energy.faq.2.q">¿Necesito paneles solares?</summary>
+          <p class="svc-faq__a" data-i18n="energy.faq.2.a">No. Los paneles suman, pero medir y cortar el consumo innecesario ya se nota en la factura.</p>
+        </details>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="energy.faq.3.q">¿Quién ve mis datos de consumo?</summary>
+          <p class="svc-faq__a" data-i18n="energy.faq.3.a">Solo tú. Se guardan en la central de tu casa y tú decides si compartes algo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ── -->
+  <section class="cta-band">
+    <img src="./img/cta-kitchen.jpg" alt="" class="cta-band__bg" aria-hidden="true">
+    <div class="cta-band__content">
+      <div class="container">
+        <h2 class="cta-band__title reveal-mask" data-i18n-html="cta.services.title">
+          ¿Te interesa algún<br><em>servicio?</em>
+        </h2>
+        <p class="cta-band__body reveal reveal-d1" data-i18n="cta.services.body">
+          Cuéntanos qué necesitas y te proponemos la instalación perfecta para tu hogar, sin compromiso.
+        </p>
+        <div class="cta-band__actions reveal reveal-d2">
+          <a href="./contact.html" class="btn-gold" data-i18n="cta.services.primary">Solicitar presupuesto</a>
+          <a href="./theme.html" class="btn-ghost"><span data-i18n="cta.services.secondary">¿Qué es la domótica?</span> <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <span class="footer-brand">SmartHome</span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tecnología residencial de lujo. Diseñamos hogares que responden a quienes los habitan.</p>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.nav.heading">Navegación</p>
+          <ul class="footer-col__links">
+            <li><a href="./index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+            <li><a href="./services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
+          <ul class="footer-col__links">
+            <li><a href="./automatizacion.html" data-i18n="footer.svc.auto">Automatización</a></li>
+            <li><a href="./seguridad.html" data-i18n="footer.svc.sec">Seguridad</a></li>
+            <li><a href="./clima.html" data-i18n="footer.svc.clima">Climatización</a></li>
+            <li><a href="./iluminacion.html" data-i18n="footer.svc.light">Iluminación</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.contact.heading">Contacto</p>
+          <ul class="footer-col__links">
+            <li><a href="mailto:contacto@smarthome.com">contacto@smarthome.com</a></li>
+            <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+            <li><a href="./contact.html" data-i18n="footer.contact.visit">Solicitar visita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="footer-legal" data-i18n="footer.legal">&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</span>
+        <span class="footer-accent" data-i18n="footer.accent">Vivir bien, es vivir inteligente.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  </script>
+  <script src="./js/motion.js"></script>
+  <script src="./js/service.js"></script>
+</body>
+</html>

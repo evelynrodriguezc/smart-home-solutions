@@ -25,7 +25,18 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
-          <li class="nav-item"><a class="nav-link active" href="./services.html" data-i18n="nav.services">Servicios</a></li>
+          <li class="nav-item nav-sub">
+            <a class="nav-link active" href="./services.html" data-i18n="nav.services">Servicios</a>
+            <ul class="nav-sub__menu">
+              <li><a class="nav-sub__link" href="./automatizacion.html" data-i18n="services.01.title">Automatización del Hogar</a></li>
+              <li><a class="nav-sub__link" href="./seguridad.html" data-i18n="services.02.title">Seguridad Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./energia.html" data-i18n="services.03.title">Ahorro Energético</a></li>
+              <li><a class="nav-sub__link is-current" href="./iluminacion.html" data-i18n="services.04.title">Iluminación Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./voz.html" data-i18n="services.05.title">Control por Voz</a></li>
+              <li><a class="nav-sub__link" href="./clima.html" data-i18n="services.06.title">Climatización Inteligente</a></li>
+              <li class="nav-sub__all"><a class="nav-sub__link" href="./services.html"><span data-i18n="nav.services.all">Ver todos</span> <span class="arrow">→</span></a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
         </ul>
         <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
@@ -35,8 +46,8 @@
 
   <!-- ── Page Hero ── -->
   <header class="page-hero page-hero--photo">
-    <img src="./img/ilu-hero.jpg" alt="" class="page-hero__photo" aria-hidden="true">
-    <img src="./img/ilu-hero-on.jpg" alt="" class="page-hero__photo page-hero__photo--on" aria-hidden="true">
+    <img src="./img/ilu-hero.jpg" alt="" class="page-hero__photo" style="object-position: 50% 18%" aria-hidden="true">
+    <img src="./img/ilu-hero-on.jpg" alt="" class="page-hero__photo page-hero__photo--on" style="object-position: 50% 18%" aria-hidden="true">
     <div class="container">
       <a href="./services.html" class="svc-back" data-hero style="--i:0"><span class="arrow">←</span> <span data-i18n="svc.back">Todos los servicios</span></a>
       <span class="eyebrow" data-hero style="--i:1; display:block" data-i18n="lighting.hero.eyebrow">Servicio 04 · Iluminación</span>
@@ -62,26 +73,29 @@
         <article class="layer-step" data-layer-step="1">
           <span class="layer-step__num">01</span>
           <h3 class="layer-step__title" data-i18n="lighting.l1.title">Luz de tarea</h3>
-          <p class="layer-step__body" data-i18n="lighting.l1.body">Donde haces algo: leer, cocinar, trabajar. Una lámpara que se enciende al sentarte y se apaga sola cuando te vas.</p>
+          <p class="layer-step__body" data-i18n="lighting.l1.body">Donde haces algo: la tira bajo los gabinetes ilumina la encimera para cocinar. Se enciende al entrar a la cocina y se apaga sola cuando sales.</p>
         </article>
 
         <article class="layer-step" data-layer-step="2">
           <span class="layer-step__num">02</span>
           <h3 class="layer-step__title" data-i18n="lighting.l2.title">Luz de acento</h3>
-          <p class="layer-step__body" data-i18n="lighting.l2.body">Resalta lo que importa: una pared, un cuadro, una textura. Tiras LED ocultas que dan profundidad sin deslumbrar.</p>
+          <p class="layer-step__body" data-i18n="lighting.l2.body">Resalta lo que importa: una luz dirigida al cuadro. No sirve para hacer nada, pero le da profundidad a la sala.</p>
         </article>
 
         <article class="layer-step" data-layer-step="3">
           <span class="layer-step__num">03</span>
           <h3 class="layer-step__title" data-i18n="lighting.l3.title">Luz ambiental</h3>
-          <p class="layer-step__body" data-i18n="lighting.l3.body">La base de todo. Luz indirecta desde el techo que llena el espacio de forma pareja y baja su intensidad a medida que cae la noche.</p>
+          <p class="layer-step__body" data-i18n="lighting.l3.body">La base de todo: luz oculta en los bordes del techo que baña las paredes y llena el espacio de forma pareja.</p>
         </article>
       </div>
 
       <div class="layers__stage">
-        <div class="layers__frame">
-          <img src="./img/ilu3.jpg" alt="" class="layers__img layers__img--off" aria-hidden="true">
-          <img src="./img/ilu3.jpg" alt="Sala con iluminación por capas" class="layers__img layers__img--on" data-i18n-attr="alt:lighting.layers.alt">
+        <div class="layers__frame" style="--ar: 1800 / 1013">
+          <img src="./img/ilu-room-off.jpg" alt="" class="layers__img layers__img--plain layers__img--off" aria-hidden="true">
+          <img src="./img/ilu-room.jpg" alt="" class="layers__img layers__img--plain layers__img--glow" aria-hidden="true">
+          <img src="./img/ilu-room.jpg" alt="Apartamento de noche con luz bajo los gabinetes, luz de acento y luz en el techo" class="layers__img layers__img--plain layers__img--on" data-i18n-attr="alt:lighting.layers.alt">
+          <span class="ilu__art" aria-hidden="true"></span>
+          <span class="ilu__art-wash" aria-hidden="true"></span>
           <div class="layers__legend" aria-hidden="true">
             <span data-legend="1" data-i18n="lighting.legend.1">Tarea</span>
             <span data-legend="2" data-i18n="lighting.legend.2">Acento</span>
@@ -183,10 +197,10 @@
         <div>
           <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
           <ul class="footer-col__links">
-            <li><a href="./automatizacion.html">Automatización</a></li>
-            <li><a href="./services.html">Seguridad</a></li>
-            <li><a href="./services.html">Climatización</a></li>
-            <li><a href="./iluminacion.html">Iluminación</a></li>
+            <li><a href="./automatizacion.html" data-i18n="footer.svc.auto">Automatización</a></li>
+            <li><a href="./seguridad.html" data-i18n="footer.svc.sec">Seguridad</a></li>
+            <li><a href="./clima.html" data-i18n="footer.svc.clima">Climatización</a></li>
+            <li><a href="./iluminacion.html" data-i18n="footer.svc.light">Iluminación</a></li>
           </ul>
         </div>
         <div>

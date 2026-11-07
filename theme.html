@@ -25,7 +25,18 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
-          <li class="nav-item"><a class="nav-link" href="./services.html" data-i18n="nav.services">Servicios</a></li>
+          <li class="nav-item nav-sub">
+            <a class="nav-link" href="./services.html" data-i18n="nav.services">Servicios</a>
+            <ul class="nav-sub__menu">
+              <li><a class="nav-sub__link" href="./automatizacion.html" data-i18n="services.01.title">Automatización del Hogar</a></li>
+              <li><a class="nav-sub__link" href="./seguridad.html" data-i18n="services.02.title">Seguridad Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./energia.html" data-i18n="services.03.title">Ahorro Energético</a></li>
+              <li><a class="nav-sub__link" href="./iluminacion.html" data-i18n="services.04.title">Iluminación Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./voz.html" data-i18n="services.05.title">Control por Voz</a></li>
+              <li><a class="nav-sub__link" href="./clima.html" data-i18n="services.06.title">Climatización Inteligente</a></li>
+              <li class="nav-sub__all"><a class="nav-sub__link" href="./services.html"><span data-i18n="nav.services.all">Ver todos</span> <span class="arrow">→</span></a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
         </ul>
         <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
@@ -67,7 +78,7 @@
           </p>
         </div>
         <div class="intro-split__visual reveal reveal-d2">
-          <img src="./img/cover1.jpg" alt="Interior de hogar inteligente" class="intro-split__img">
+          <img src="./img/cover1.jpg" alt="Interior de hogar inteligente" data-i18n-attr="alt:theme.img.alt" class="intro-split__img">
           <div class="intro-split__badge">
             <span class="intro-split__badge-num">10+</span>
             <span class="intro-split__badge-label" data-i18n="theme.intro.badge.label">Sistemas integrados</span>
@@ -172,10 +183,10 @@
         <div>
           <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
           <ul class="footer-col__links">
-            <li><a href="./services.html">Automatización</a></li>
-            <li><a href="./services.html">Seguridad</a></li>
-            <li><a href="./services.html">Climatización</a></li>
-            <li><a href="./services.html">Iluminación</a></li>
+            <li><a href="./services.html" data-i18n="footer.svc.auto">Automatización</a></li>
+            <li><a href="./services.html" data-i18n="footer.svc.sec">Seguridad</a></li>
+            <li><a href="./clima.html" data-i18n="footer.svc.clima">Climatización</a></li>
+            <li><a href="./services.html" data-i18n="footer.svc.light">Iluminación</a></li>
           </ul>
         </div>
         <div>

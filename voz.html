@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title="title.voice">Control por Voz — SmartHome</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/motion.css">
+  <link rel="stylesheet" href="./css/service.css">
+  <script>document.documentElement.classList.add('motion')</script>
+  <script src="./js/i18n.js" defer></script>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="siteNav">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">SmartHome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html" data-i18n="nav.home">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+          <li class="nav-item nav-sub">
+            <a class="nav-link active" href="./services.html" data-i18n="nav.services">Servicios</a>
+            <ul class="nav-sub__menu">
+              <li><a class="nav-sub__link" href="./automatizacion.html" data-i18n="services.01.title">Automatización del Hogar</a></li>
+              <li><a class="nav-sub__link" href="./seguridad.html" data-i18n="services.02.title">Seguridad Inteligente</a></li>
+              <li><a class="nav-sub__link" href="./energia.html" data-i18n="services.03.title">Ahorro Energético</a></li>
+              <li><a class="nav-sub__link" href="./iluminacion.html" data-i18n="services.04.title">Iluminación Inteligente</a></li>
+              <li><a class="nav-sub__link is-current" href="./voz.html" data-i18n="services.05.title">Control por Voz</a></li>
+              <li><a class="nav-sub__link" href="./clima.html" data-i18n="services.06.title">Climatización Inteligente</a></li>
+              <li class="nav-sub__all"><a class="nav-sub__link" href="./services.html"><span data-i18n="nav.services.all">Ver todos</span> <span class="arrow">→</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button type="button" class="lang-toggle" data-lang-toggle aria-label="Switch to English">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Hero ── -->
+  <header class="page-hero page-hero--photo">
+    <img src="./img/voice-hero.jpg" alt="" class="page-hero__photo" style="object-position: 50% 50%" aria-hidden="true">
+    <div class="container">
+      <a href="./services.html" class="svc-back" data-hero style="--i:0"><span class="arrow">←</span> <span data-i18n="svc.back">Todos los servicios</span></a>
+      <span class="eyebrow" data-hero style="--i:1; display:block" data-i18n="voice.hero.eyebrow">Servicio 05 · Control por voz</span>
+      <h1 class="page-hero__title" data-hero style="--i:2" data-i18n-html="voice.hero.title">Pídelo,<br><em>sin buscar el móvil</em></h1>
+      <p class="page-hero__body" data-hero style="--i:3" data-i18n="voice.hero.body">Alexa, Google Home o Siri conectados a toda la casa. Le preguntas como a una persona y te responde con lo que de verdad está pasando.</p>
+    </div>
+  </header>
+
+  <section class="layers layers--voice" data-layers data-active="0">
+    <div class="container layers__grid">
+      <div class="layers__steps">
+        <div class="layers__intro" data-layer-step="0">
+          <span class="eyebrow" data-i18n="voice.layers.eyebrow">Antes de salir</span>
+          <h2 class="section-title section-title--light reveal-mask" data-i18n-html="voice.layers.title">Pregúntale<br><em>a la casa</em></h2>
+          <p data-i18n="voice.layers.body">Baja despacio. Estás en la puerta, a punto de salir, y no quieres dar una vuelta revisando todo.</p>
+        </div>
+
+        <article class="layer-step" data-layer-step="1">
+          <span class="layer-step__num" data-i18n="voice.l1.time">08:10 · Revisar</span>
+          <h3 class="layer-step__title" data-i18n="voice.l1.title">“¿Quedó alguna ventana abierta?”</h3>
+          <p class="layer-step__body" data-i18n="voice.l1.body">La casa sabe el estado de cada sensor. No tienes que subir al estudio para comprobarlo.</p>
+        </article>
+
+        <article class="layer-step" data-layer-step="2">
+          <span class="layer-step__num" data-i18n="voice.l2.time">08:11 · Preguntar</span>
+          <h3 class="layer-step__title" data-i18n="voice.l2.title">“¿Apagué la plancha?”</h3>
+          <p class="layer-step__body" data-i18n="voice.l2.body">Los enchufes inteligentes saben qué está encendido. Si algo quedó prendido, lo apagas con la misma frase.</p>
+        </article>
+
+        <article class="layer-step" data-layer-step="3">
+          <span class="layer-step__num" data-i18n="voice.l3.time">08:12 · Salir</span>
+          <h3 class="layer-step__title" data-i18n="voice.l3.title">“Me voy”</h3>
+          <p class="layer-step__body" data-i18n="voice.l3.body">Una sola frase cierra la puerta con llave, apaga las luces, pone el aire en eco y activa la alarma.</p>
+        </article>
+      </div>
+
+      <div class="layers__stage">
+        <div class="layers__frame" style="--ar: 1800 / 1200">
+          <img src="./img/voice-room.jpg" alt="Puerta de entrada con porche" class="layers__img layers__img--plain voice__room" data-i18n-attr="alt:voice.layers.alt">
+          <div class="voice-bubbles">
+            <div class="ui-card voice-bubble" data-voice="1">
+              <span class="voice-bubble__mic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+              <div><strong data-type-step="1" data-i18n="voice.say.1">“¿Quedó alguna ventana abierta?”</strong><span data-i18n="voice.reply.1">Sí: la del estudio. ¿La cierro?</span></div>
+            </div>
+            <div class="ui-card voice-bubble" data-voice="2">
+              <span class="voice-bubble__mic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+              <div><strong data-type-step="2" data-i18n="voice.say.2">“¿Apagué la plancha?”</strong><span data-i18n="voice.reply.2">Seguía encendida. Ya la apagué.</span></div>
+            </div>
+            <div class="ui-card voice-bubble" data-voice="3">
+              <span class="voice-bubble__mic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+              <div><strong data-type-step="3" data-i18n="voice.say.3">“Me voy”</strong><span data-i18n="voice.reply.3">Puerta cerrada · luces apagadas · alarma activada</span></div>
+            </div>
+          </div>
+          <div class="layers__legend" aria-hidden="true">
+            <span data-legend="1" data-i18n="voice.legend.1">Revisar</span>
+            <span data-legend="2" data-i18n="voice.legend.2">Preguntar</span>
+            <span data-legend="3" data-i18n="voice.legend.3">Salir</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-includes">
+    <div class="container">
+      <div class="svc-includes__header">
+        <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="lighting.inc.eyebrow">Qué incluye</span>
+        <h2 class="section-title reveal-mask" data-i18n-html="voice.inc.title">Tu voz,<br><em>tus reglas</em></h2>
+      </div>
+      <div class="svc-includes__grid">
+        <div class="svc-includes__item reveal">
+          <h3 class="svc-includes__title" data-i18n="voice.inc.1.title">Con el asistente que ya tienes</h3>
+          <p class="svc-includes__body" data-i18n="voice.inc.1.body">Alexa, Google Home o Siri. Si no tienes ninguno, te recomendamos el que mejor encaja con tu casa.</p>
+        </div>
+        <div class="svc-includes__item reveal reveal-d1">
+          <h3 class="svc-includes__title" data-i18n="voice.inc.2.title">Frases que tú eliges</h3>
+          <p class="svc-includes__body" data-i18n="voice.inc.2.body">“Me voy”, “Me voy” o “Hora de cine”: cada frase puede mover varias cosas a la vez.</p>
+        </div>
+        <div class="svc-includes__item reveal">
+          <h3 class="svc-includes__title" data-i18n="voice.inc.3.title">Micrófono que se apaga</h3>
+          <p class="svc-includes__body" data-i18n="voice.inc.3.body">Cada parlante tiene un botón físico de silencio. Si está apagado, no escucha nada.</p>
+        </div>
+        <div class="svc-includes__item reveal reveal-d1">
+          <h3 class="svc-includes__title" data-i18n="voice.inc.4.title">Sin voz también</h3>
+          <p class="svc-includes__body" data-i18n="voice.inc.4.body">Todo lo que haces con la voz también funciona con los interruptores y con la app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="svc-faq">
+    <div class="container svc-faq__grid">
+      <div>
+        <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="lighting.faq.eyebrow">Preguntas frecuentes</span>
+        <h2 class="section-title reveal-mask" data-i18n-html="lighting.faq.title">Antes de<br><em>empezar</em></h2>
+      </div>
+      <div>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="voice.faq.1.q">¿Tengo que comprar parlantes nuevos?</summary>
+          <p class="svc-faq__a" data-i18n="voice.faq.1.a">No necesariamente. Usamos los que ya tienes si son compatibles, y solo sumamos los que hagan falta.</p>
+        </details>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="voice.faq.2.q">¿Está escuchando todo el tiempo?</summary>
+          <p class="svc-faq__a" data-i18n="voice.faq.2.a">Solo espera la palabra de activación, como “Alexa” u “Oye Siri”. Nada se graba antes de eso.</p>
+        </details>
+        <details class="svc-faq__item">
+          <summary class="svc-faq__q" data-i18n="voice.faq.3.q">¿Entiende español?</summary>
+          <p class="svc-faq__a" data-i18n="voice.faq.3.a">Sí. Y en una misma casa cada persona puede hablarle en su idioma.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Band ── -->
+  <section class="cta-band">
+    <img src="./img/cta-kitchen.jpg" alt="" class="cta-band__bg" aria-hidden="true">
+    <div class="cta-band__content">
+      <div class="container">
+        <h2 class="cta-band__title reveal-mask" data-i18n-html="cta.services.title">
+          ¿Te interesa algún<br><em>servicio?</em>
+        </h2>
+        <p class="cta-band__body reveal reveal-d1" data-i18n="cta.services.body">
+          Cuéntanos qué necesitas y te proponemos la instalación perfecta para tu hogar, sin compromiso.
+        </p>
+        <div class="cta-band__actions reveal reveal-d2">
+          <a href="./contact.html" class="btn-gold" data-i18n="cta.services.primary">Solicitar presupuesto</a>
+          <a href="./theme.html" class="btn-ghost"><span data-i18n="cta.services.secondary">¿Qué es la domótica?</span> <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <span class="footer-brand">SmartHome</span>
+          <p class="footer-tagline" data-i18n="footer.tagline">Tecnología residencial de lujo. Diseñamos hogares que responden a quienes los habitan.</p>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.nav.heading">Navegación</p>
+          <ul class="footer-col__links">
+            <li><a href="./index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="./theme.html" data-i18n="nav.what">¿Qué es?</a></li>
+            <li><a href="./services.html" data-i18n="nav.services">Servicios</a></li>
+            <li><a href="./contact.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.services.heading">Servicios</p>
+          <ul class="footer-col__links">
+            <li><a href="./automatizacion.html" data-i18n="footer.svc.auto">Automatización</a></li>
+            <li><a href="./seguridad.html" data-i18n="footer.svc.sec">Seguridad</a></li>
+            <li><a href="./clima.html" data-i18n="footer.svc.clima">Climatización</a></li>
+            <li><a href="./iluminacion.html" data-i18n="footer.svc.light">Iluminación</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col__heading" data-i18n="footer.contact.heading">Contacto</p>
+          <ul class="footer-col__links">
+            <li><a href="mailto:contacto@smarthome.com">contacto@smarthome.com</a></li>
+            <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+            <li><a href="./contact.html" data-i18n="footer.contact.visit">Solicitar visita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="footer-legal" data-i18n="footer.legal">&copy; 2024 SmartHome by ERC. Todos los derechos reservados.</span>
+        <span class="footer-accent" data-i18n="footer.accent">Vivir bien, es vivir inteligente.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    const nav = document.getElementById('siteNav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  </script>
+  <script src="./js/motion.js"></script>
+  <script src="./js/service.js"></script>
+</body>
+</html>
