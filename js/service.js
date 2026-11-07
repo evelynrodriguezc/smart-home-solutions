@@ -17,7 +17,10 @@
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => { if (e.isIntersecting) setActive(Number(e.target.dataset.layerStep)); });
-  }, { rootMargin: '-45% 0px -45% 0px' });
+  }, {
+    // on phones the photo is pinned at the top, so read steps lower on screen
+    rootMargin: window.matchMedia('(max-width: 991px)').matches ? '-62% 0px -32% 0px' : '-45% 0px -45% 0px'
+  });
   steps.forEach((s) => io.observe(s));
 
   // No motion: show the finished, fully lit room
