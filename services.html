@@ -6,6 +6,8 @@
   <title data-i18n-title="title.services">Servicios — SmartHome</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/motion.css">
+  <script>document.documentElement.classList.add('motion')</script>
   <script src="./js/i18n.js" defer></script>
 </head>
 <body>
@@ -33,11 +35,11 @@
   <!-- ── Page Hero (typographic, no image) ── -->
   <header class="page-hero">
     <div class="container">
-      <span class="eyebrow" data-i18n="services.hero.eyebrow">Lo que ofrecemos</span>
-      <h1 class="page-hero__title" data-i18n-html="services.hero.title">
+      <span class="eyebrow" data-hero style="--i:0; display:inline-block" data-i18n="services.hero.eyebrow">Lo que ofrecemos</span>
+      <h1 class="page-hero__title" data-hero style="--i:1" data-i18n-html="services.hero.title">
         Nuestros<br><em>Servicios</em>
       </h1>
-      <p class="page-hero__body" data-i18n="services.hero.body">
+      <p class="page-hero__body" data-hero style="--i:2" data-i18n="services.hero.body">
         Soluciones integrales de domótica para espacios residenciales. Cada instalación se diseña a medida.
       </p>
     </div>
@@ -48,13 +50,13 @@
     <div class="container">
       <div class="services-list__header reveal">
         <span class="eyebrow" style="color: var(--c-text-muted);" data-i18n="services.list.eyebrow">Catálogo completo</span>
-        <h2 class="section-title" data-i18n-html="services.list.title">Cada servicio, <em>a tu medida</em></h2>
+        <h2 class="section-title reveal-mask" data-i18n-html="services.list.title">Cada servicio, <em>a tu medida</em></h2>
       </div>
 
       <div class="services-wrapper">
 
       <!-- Row 1 -->
-      <div class="service-row reveal">
+      <div class="service-row reveal" id="automatizacion">
         <div class="service-row__visual">
           <img src="./img/persianas.jpg" alt="Automatización del Hogar" class="service-row__img" data-i18n-attr="alt:services.01.title">
         </div>
@@ -71,7 +73,7 @@
       </div>
 
       <!-- Row 2 (reverse) -->
-      <div class="service-row service-row--reverse reveal">
+      <div class="service-row service-row--reverse reveal" id="seguridad">
         <div class="service-row__visual">
           <img src="./img/cam2.jpg" alt="Seguridad Inteligente" class="service-row__img" data-i18n-attr="alt:services.02.title">
         </div>
@@ -88,7 +90,7 @@
       </div>
 
       <!-- Row 3 -->
-      <div class="service-row reveal">
+      <div class="service-row reveal" id="energia">
         <div class="service-row__visual">
           <img src="./img/energetica.jpg" alt="Ahorro Energético" class="service-row__img" data-i18n-attr="alt:services.03.title">
         </div>
@@ -105,7 +107,7 @@
       </div>
 
       <!-- Row 4 (reverse) -->
-      <div class="service-row service-row--reverse reveal">
+      <div class="service-row service-row--reverse reveal" id="iluminacion">
         <div class="service-row__visual">
           <img src="./img/ilu3.jpg" alt="Iluminación Inteligente" class="service-row__img" data-i18n-attr="alt:services.04.title">
         </div>
@@ -122,7 +124,7 @@
       </div>
 
       <!-- Row 5 -->
-      <div class="service-row reveal">
+      <div class="service-row reveal" id="voz">
         <div class="service-row__visual">
           <img src="./img/homepod2.jpg" alt="Control por Voz" class="service-row__img" data-i18n-attr="alt:services.05.title">
         </div>
@@ -139,7 +141,7 @@
       </div>
 
       <!-- Row 6 (reverse) -->
-      <div class="service-row service-row--reverse reveal">
+      <div class="service-row service-row--reverse reveal" id="clima">
         <div class="service-row__visual">
           <img src="./img/termo3.jpg" alt="Climatización Inteligente" class="service-row__img" data-i18n-attr="alt:services.06.title">
         </div>
@@ -164,7 +166,7 @@
     <img src="./img/cta-kitchen.jpg" alt="" class="cta-band__bg" aria-hidden="true">
     <div class="cta-band__content">
       <div class="container">
-        <h2 class="cta-band__title reveal" data-i18n-html="cta.services.title">
+        <h2 class="cta-band__title reveal-mask" data-i18n-html="cta.services.title">
           ¿Te interesa algún<br><em>servicio?</em>
         </h2>
         <p class="cta-band__body reveal reveal-d1" data-i18n="cta.services.body">
@@ -235,5 +237,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
     revealEls.forEach(el => io.observe(el));
   </script>
+  <script src="./js/motion.js"></script>
 </body>
 </html>

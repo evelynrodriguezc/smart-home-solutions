@@ -1,0 +1,225 @@
+/* ──────────────────────────────────────────
+   MOTION LAYER
+   Everything here is gated behind html.motion (set by an inline script),
+   so pages still render fully if JS is off, and all of it is dropped
+   for people who prefer reduced motion.
+────────────────────────────────────────── */
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io:  cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Anchored service rows land below the fixed navbar */
+.service-row[id] { scroll-margin-top: calc(var(--nav-h) + 1.5rem); }
+
+/* ── Home hero: lights turn on, then the dimmer takes over ──
+   --dim / --sat are written by motion.js (intro tween + dimmer drag). */
+.hero__image {
+  filter: brightness(var(--dim, 1)) saturate(var(--sat, 1)) sepia(calc(var(--warm, 0) * 0.35));
+}
+.motion .hero__image {
+  transform: scale(1.1);
+  transition: transform 2.6s var(--ease-out);
+}
+.motion.is-loaded .hero__image { transform: scale(1); }
+
+/* ── Dimmer: a hairline rail on the photo; drag anywhere on the photo ── */
+.hero__right[data-dimmable] {
+  cursor: ns-resize;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.hero__right[data-dimmable] img { -webkit-user-drag: none; pointer-events: none; }
+/* while dragging, nothing on the page highlights */
+html:has(.dimmer.is-dragging) { user-select: none; -webkit-user-select: none; }
+
+.dimmer {
+  position: absolute;
+  top: 50%;
+  right: max(2.25rem, 3.5vw);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  transform: translateY(-50%);
+  pointer-events: none; /* the whole photo is the drag surface */
+  user-select: none;
+  -webkit-user-select: none;
+}
+.motion .dimmer {
+  opacity: 0;
+  transition: opacity 1.2s ease 0.4s;
+}
+.motion.is-loaded .dimmer { opacity: 1; }
+
+.dimmer__rail {
+  position: relative;
+  width: 1px;
+  height: clamp(200px, 38vh, 340px);
+  background: rgba(255, 255, 255, 0.18);
+  pointer-events: auto;
+}
+.dimmer__rail:focus-visible { outline: none; }
+.dimmer__rail:focus-visible .dimmer__knob { box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35), 0 0 18px 4px rgba(255, 214, 160, 0.55); }
+
+.dimmer__fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(var(--level, 0.8) * 100%);
+  background: linear-gradient(to top, rgba(255, 200, 140, 0.15), rgba(255, 236, 205, 0.85));
+}
+
+/* The knob glows like a small light source, brighter as the level rises */
+.dimmer__knob {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--level, 0.8) * 100%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #FFF4E2;
+  transform: translate(-50%, 50%);
+  box-shadow: 0 0 calc(6px + var(--level, 0.8) * 16px) calc(1px + var(--level, 0.8) * 4px)
+              rgba(255, 210, 150, calc(0.25 + var(--level, 0.8) * 0.5));
+  transition: transform 0.3s var(--ease-out);
+}
+.dimmer.is-dragging .dimmer__knob { transform: translate(-50%, 50%) scale(1.35); }
+
+.dimmer__value {
+  position: absolute;
+  right: calc(100% + 0.9rem);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+}
+
+.dimmer__hint {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  transition: opacity 0.8s ease;
+}
+.dimmer.is-used .dimmer__hint { opacity: 0; }
+
+@media (max-width: 991px) {
+  .dimmer { display: none; }
+}
+
+/* ── Page intros: text comes up from behind a mask, in order ── */
+.motion [data-hero] {
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(0.6em);
+  opacity: 0;
+  transition:
+    clip-path 1.1s var(--ease-out),
+    transform 1.1s var(--ease-out),
+    opacity 0.6s ease;
+  transition-delay: calc(var(--d, 0.25s) + var(--i, 0) * 0.11s);
+}
+.motion .hero [data-hero] { --d: 0.9s; } /* wait for the lights on the home page */
+.motion.is-loaded [data-hero] {
+  clip-path: inset(0 0 0 0);
+  transform: none;
+  opacity: 1;
+}
+
+/* ── Section titles: mask reveal (parent is observed, see motion.js) ── */
+.motion .reveal-mask {
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(0.5em);
+  transition: clip-path 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.motion .reveal-mask.visible {
+  clip-path: inset(0 0 0 0);
+  transform: none;
+}
+
+/* inset() can't go negative, so give big glyph descenders room inside the box */
+.motion .hero__headline-serif,
+.motion .hero__headline-accent,
+.motion .page-hero__title,
+.motion .reveal-mask {
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.motion .hero__headline-serif { margin-bottom: calc(0.35rem - 0.14em); }
+.motion .page-hero__title { margin-bottom: calc(1.25rem - 0.14em); }
+
+/* ── Images: unveil upward, then settle ── */
+.motion .svc-e__media,
+.motion .service-row__visual {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.3s var(--ease-out);
+}
+.motion .svc-e__media { clip-path: inset(100% 0 0 0 round var(--r-lg)); }
+.motion .svc-e__media .svc-e__img,
+.motion .service-row__visual .service-row__img {
+  transform: scale(1.25);
+  transition: transform 1.6s var(--ease-out), filter 1.2s var(--ease-io);
+}
+.motion .svc-e.visible .svc-e__media { clip-path: inset(0 0 0 0 round var(--r-lg)); }
+.motion .service-row.visible .service-row__visual { clip-path: inset(0 0 0 0); }
+.motion .svc-e.visible .svc-e__media .svc-e__img,
+.motion .service-row.visible .service-row__img { transform: scale(1); }
+.motion .svc-e.visible:hover .svc-e__media .svc-e__img {
+  transform: scale(1.06);
+  transition-duration: 0.9s;
+}
+.motion .svc-e.reveal-d1 .svc-e__media { transition-delay: 0.12s; }
+.motion .svc-e.reveal-d2 .svc-e__media { transition-delay: 0.24s; }
+
+/* ── Features strip: a light sweeps across each number ── */
+.motion .features-strip__num {
+  background: linear-gradient(90deg, currentColor 40%, #fff 50%, currentColor 60%) 100% 0 / 300% 100% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.motion .features-strip__item.visible .features-strip__num {
+  -webkit-text-fill-color: transparent;
+  animation: numSweep 1.6s var(--ease-io) 0.3s both;
+}
+@keyframes numSweep {
+  from { background-position: 100% 0; }
+  to   { background-position: 0 0; }
+}
+
+/* ── CTA band: slow parallax on the photo ── */
+.motion .cta-band__bg {
+  height: 130%;
+  top: -15%;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion .hero__image,
+  .motion [data-hero],
+  .motion .reveal-mask,
+  .motion .svc-e__media,
+  .motion .service-row__visual,
+  .motion .svc-e__media .svc-e__img,
+  .motion .service-row__visual .service-row__img {
+    transition: none !important;
+    clip-path: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .motion .dimmer { transition: none !important; opacity: 1 !important; }
+  .motion .cta-band__bg { transform: none !important; }
+  .motion .features-strip__num { animation: none !important; }
+  .motion .features-strip__item.visible .features-strip__num { -webkit-text-fill-color: currentColor; }
+}

@@ -20,6 +20,8 @@
       'hero.cta.primary': 'Ver Servicios',
       'hero.cta.secondary': 'Hablar con un experto',
       'hero.scroll': 'Descubrir',
+      'dimmer.label': 'Intensidad de la luz',
+      'dimmer.hint': 'Desliza',
 
       /* Features strip */
       'features.01.label': 'Automatización Total',
@@ -176,6 +178,8 @@
       'hero.cta.primary': 'View Services',
       'hero.cta.secondary': 'Talk to an expert',
       'hero.scroll': 'Discover',
+      'dimmer.label': 'Light intensity',
+      'dimmer.hint': 'Slide',
 
       /* Features */
       'features.01.label': 'Full Automation',
