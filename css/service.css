@@ -377,7 +377,7 @@ html:not(.motion) .layers--shades .layers__frame { --open: 1; }
   box-shadow:
     inset 12px 0 16px -12px rgba(50, 40, 28, 0.4),
     inset -12px 0 16px -12px rgba(50, 40, 28, 0.4);
-  filter: brightness(calc(1.02 + var(--open) * 0.12)) saturate(0.9);
+  filter: brightness(calc(0.5 + var(--open) * 0.62)) saturate(calc(0.7 + var(--open) * 0.2));
 }
 .shade__fabric::after {
   content: '';
